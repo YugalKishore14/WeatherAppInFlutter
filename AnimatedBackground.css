@@ -1,0 +1,79 @@
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, background-color 1s ease-in-out;
+    z-index: 1;
+    /* Behind the weather card */
+    filter: brightness(0.8);
+    /* Slightly dim the background for better readability */
+}
+
+/* Default / Fallback */
+.animated-background.bg-default {
+    background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY3ODg4ODg4OA&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #3f51b5;
+}
+
+/* Clear Sky */
+.animated-background.bg-clear {
+    background-image: url('https://images.unsplash.com/photo-1559900048-26176395353d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c3VubnklMjBza3l8fHx8fHwxNjc4ODg4ODg5&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #87ceeb;
+}
+
+/* Clouds */
+.animated-background.bg-clouds {
+    background-image: url('https://images.unsplash.com/photo-1501630834299-413ea84cd364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2xvdWR5JTIwc2t5fHx8fHx8MTY3ODg4ODg5MA&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #b0c4de;
+}
+
+/* Rain */
+.animated-background.bg-rain {
+    background-image: url('https://images.unsplash.com/photo-1534274988757-32171339c94d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cmFpbnl8fHx8fHwxNjc4ODg4ODkx&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #4682b4;
+}
+
+/* Thunderstorm */
+.animated-background.bg-thunderstorm {
+    background-image: url('https://images.unsplash.com/photo-1597500000000-000000000000?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGh1bmRlcnN0b3JtfHx8fHx8MTY3ODg4ODg5Mg&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #2f4f4f;
+}
+
+/* Snow */
+.animated-background.bg-snow {
+    background-image: url('https://images.unsplash.com/photo-1542601098-8fc1149e19f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c25vd3l8fHx8fHwxNjc4ODg4ODkz&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #a9a9a9;
+}
+
+/* Mist/Fog/Haze */
+.animated-background.bg-mist {
+    background-image: url('https://images.unsplash.com/photo-1501630834299-413ea84cd364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Zm9nfHx8fHx8MTY3ODg4ODg5NA&ixlib=rb-4.0.3&q=80&w=1080');
+    background-color: #778899;
+}
+
+/* Animation for background (optional, for subtle movement) */
+/* This example uses a simple zoom/pan effect */
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+        transform: scale(1);
+    }
+
+    50% {
+        background-position: 100% 100%;
+        transform: scale(1.05);
+    }
+
+    100% {
+        background-position: 0% 0%;
+        transform: scale(1);
+    }
+}
+
+.animated-background {
+    animation: backgroundPan 60s ease-in-out infinite alternate;
+}
