@@ -37,7 +37,7 @@ class AnimatedBackground extends StatelessWidget {
               as ImageProvider, // Cast to ImageProvider
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
-            Colors.black.withOpacity(0.4),
+            Colors.black.withValues(alpha: 0.5),
             BlendMode.darken,
           ),
           // Add an error builder to handle image loading errors gracefully

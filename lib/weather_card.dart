@@ -18,12 +18,12 @@ class WeatherCard extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(25.0),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.15),
+            color: Colors.white.withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(16.0),
-            border: Border.all(color: Colors.white.withOpacity(0.3)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.3)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black.withValues(alpha: 0.1),
                 blurRadius: 30,
                 offset: const Offset(0, 10),
               ),
@@ -71,12 +71,12 @@ class WeatherCard extends StatelessWidget {
                 weather.description.toUpperCase(),
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   letterSpacing: 1.2,
                 ),
               ),
               const SizedBox(height: 20),
-              Divider(color: Colors.white.withOpacity(0.2)),
+              Divider(color: Colors.white.withValues(alpha: 0.2)),
               const SizedBox(height: 20),
               _buildDetailRow('Humidity', '${weather.humidity}%'),
               const SizedBox(height: 15),
@@ -94,7 +94,8 @@ class WeatherCard extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(fontSize: 18, color: Colors.white.withOpacity(0.7)),
+          style: TextStyle(
+              fontSize: 18, color: Colors.white.withValues(alpha: 0.7)),
         ),
         Text(
           value,

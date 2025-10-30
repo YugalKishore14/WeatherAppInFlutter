@@ -92,10 +92,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             hintText: 'Enter city name',
-                            hintStyle:
-                                TextStyle(color: Colors.white.withOpacity(0.7)),
+                            hintStyle: TextStyle(
+                                color: Colors.white.withValues(alpha: 0.7)),
                             filled: true,
-                            fillColor: Colors.white.withOpacity(0.2),
+                            fillColor: Colors.white.withValues(alpha: 0.2),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide.none,
